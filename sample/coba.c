@@ -32,10 +32,10 @@ int main() {
             printf("Test 4\n");
             break;
         case 5:
-            printf("===== GOODBYE =====\n");
+            printf("==================== GOODBYE ====================\n");
             break;
         default:
-            printf("menu invalid\n");
+            printf("===== menu invalid =====\n");
             break;
         }
     }while(choice != 5);
@@ -72,4 +72,5 @@ float Dollar (float b){
     printf("%.2f USD = %.2f Euro \n",b , b * 0.95);
     printf("%.2f USD = %.2f Pound \n",b , b * 0.79);
 }
+
 
