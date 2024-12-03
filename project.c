@@ -62,7 +62,6 @@ int selectMenu() {
     scanf("%d", &choice);
 
     return choice;
-
 }
 
 float Rupiah (float a){
