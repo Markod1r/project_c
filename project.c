@@ -1,9 +1,9 @@
 #include <stdio.h>
 
-float Rupiah(float a);
-float Dollar(float b);
-float Euro(float c);
-float Pound(float d);
+void Rupiah(float a);
+void Dollar(float b);
+void Euro(float c);
+void Pound(float d);
 
 int main() {
     int choice;
@@ -68,25 +68,25 @@ int main() {
     return 0;
 }
 
-float Rupiah (float a){
+void Rupiah (float a){
     printf("%.2f Rupiah = %.2f USD \n",a , a / 15872.11);
     printf("%.2f Rupiah = %.2f Euro \n",a , a / 16746.58);
     printf("%.2f Rupiah = %.2f Pound \n",a , a / 20123.76);
 }
 
-float Dollar (float b){
+void Dollar (float b){
     printf("%.2f USD = %.2f Rupiah \n",b , b * 15848.55);
     printf("%.2f USD = %.2f Euro \n",b , b * 0.95);
     printf("%.2f USD = %.2f Pound \n",b , b * 0.79);
 }
 
-float Euro (float c) {
+void Euro (float c) {
     printf("%.2f Euro = %.2f Rupiah \n",c , c * 16746.58);
     printf("%.2f Euro = %.2f USD \n",c , c * 0.95);
     printf("%.2f Euro = %.2f Pound \n",c , c * 0.83);
 }
 
-float Pound (float d){
+void Pound (float d){
     printf("%.2f Pound = %.2f Rupiah \n",d , d * 20123.76);
     printf("%.2f Pound = %.2f USD \n",d , d * 0.79);
     printf("%.2f Pound = %.2f Euro \n",d , d * 0.83);
