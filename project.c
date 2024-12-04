@@ -11,8 +11,10 @@ int main() {
     char YesNo;
             
     do {
-        printf("======== WELCOME TO CURRENCY CONVERTER ========\n");
-        printf("menu : \n");
+        printf("\t===============================================================\n");
+        printf("\t==               WELCOME TO CURRENCY CONVERTER               ==\n");
+        printf("\t===============================================================\n");
+
         printf("1. Rupiah\n");
         printf("2. USD\n");
         printf("3. Euro\n");
@@ -43,17 +45,25 @@ int main() {
             Pound(pound);
             break;
         case 5:
-            printf("==================== GOODBYE ==================\n"); 
+            printf("\t===============================================================\n");
+            printf("\t==                       GOODBYE :)                          ==\n");
+            printf("\t===============================================================\n");
             return 0;
         default:
-            printf("================ menu invalid ================\n");
+            printf("menu invalid :(\n");
             break;
         }
 
         printf("do you want to try again? (y/n) :");
         scanf(" %c", &YesNo);
 
-    } while(YesNo == 'y' || YesNo == 'Y');
+        if(YesNo == 'n' || YesNo == 'N') {
+            printf("\t===============================================================\n");
+            printf("\t==                       GOODBYE :)                          ==\n");
+            printf("\t===============================================================\n");
+        }
+        
+        } while(YesNo == 'y' || YesNo == 'Y');
 
     return 0;
 }
