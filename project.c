@@ -8,11 +8,9 @@ float Pound(float d);
 int main() {
     int choice;
     float rupiah, dollar, euro, pound;
+    char YesNo;
             
     do {
-    
-        int choice;
-
         printf("======== WELCOME TO CURRENCY CONVERTER ========\n");
         printf("menu : \n");
         printf("1. Rupiah\n");
@@ -20,8 +18,7 @@ int main() {
         printf("3. Euro\n");
         printf("4. Pound\n");
         printf("5. Exit\n");
-        printf("Please select the menu : ");
-
+        printf("Please select the menu (1-5): ");
         scanf("%d", &choice);
 
         switch (choice){
@@ -46,13 +43,17 @@ int main() {
             Pound(pound);
             break;
         case 5:
-            printf("==================== GOODBYE ====================\n");
-            break;
+            printf("==================== GOODBYE ==================\n"); 
+            return 0;
         default:
-            printf("======= menu invalid, please try again ========\n");
+            printf("================ menu invalid ================\n");
             break;
         }
-    }while(choice != 5);
+
+        printf("do you want to try again? (y/n) :");
+        scanf(" %c", &YesNo);
+
+    } while(YesNo == 'y' || YesNo == 'Y');
 
     return 0;
 }
