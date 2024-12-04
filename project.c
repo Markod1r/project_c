@@ -1,6 +1,5 @@
 #include <stdio.h>
 
-int selectMenu();
 float Rupiah(float a);
 float Dollar(float b);
 float Euro(float c);
@@ -12,7 +11,18 @@ int main() {
             
     do {
     
-        choice = selectMenu();
+        int choice;
+
+        printf("======== WELCOME TO CURRENCY CONVERTER ========\n");
+        printf("menu : \n");
+        printf("1. Rupiah\n");
+        printf("2. USD\n");
+        printf("3. Euro\n");
+        printf("4. Pound\n");
+        printf("5. Exit\n");
+        printf("Please select the menu : ");
+
+        scanf("%d", &choice);
 
         switch (choice){
         case 1:
@@ -45,23 +55,6 @@ int main() {
     }while(choice != 5);
 
     return 0;
-}
-
-int selectMenu() {
-    int choice;
-
-    printf("======== WELCOME TO CURRENCY CONVERTER ========\n");
-    printf("menu : \n");
-    printf("1. Rupiah\n");
-    printf("2. USD\n");
-    printf("3. Euro\n");
-    printf("4. Pound\n");
-    printf("5. Exit\n");
-    printf("Please select the menu : ");
-
-    scanf("%d", &choice);
-
-    return choice;
 }
 
 float Rupiah (float a){
